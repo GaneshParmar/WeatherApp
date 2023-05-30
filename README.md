@@ -1,5 +1,3 @@
-Sure! Here's an example of a README file for your Weather App project on GitHub:
-
 # Weather App
 
 The Weather App is an Android application that allows users to search for weather information of a specific city and view the current weather conditions. It is developed using Kotlin programming language and Android Jetpack components.
@@ -47,5 +45,3 @@ Contributions to the Weather App project are welcome. If you encounter any issue
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-Feel free to customize this README file according to your project's specific details and requirements.
