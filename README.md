@@ -34,7 +34,7 @@ Please note that the app uses a free version of a weather API, which has a month
 
 ## Screenshots
 
-![ScreenShot1](/screenshot/Screenshot_20230530-085614_Weather App.jpg)
+![ScreenShot1](screenshot/Screenshot_20230530-085614_Weather App.jpg)
 
 ## Contributing
 
