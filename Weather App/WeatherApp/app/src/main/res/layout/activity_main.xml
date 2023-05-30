@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="weather"
+            type="com.example.weatherapp.WeatherResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="284dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:hint="Search Weather by City"
+                android:lines="1" />
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/gray80"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:translationZ="10dp"
+            >
+            <ProgressBar
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/cityText"
+            style="@style/appTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@{weather.location.city}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:id="@+id/tempLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/cityText"
+            app:layout_constraintTop_toBottomOf="@+id/cityText">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/appTextStyle"
+                    android:text='@{String.valueOf(weather.current_observation.condition.temperature).concat("°C")}'
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/appTextStyle"
+                    android:text="@{weather.current_observation.condition.text}"
+                    android:textSize="30sp"
+                    android:textStyle="normal"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+<!--        Astrology here -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="@id/tempLinearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tempLinearLayout"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Astrology"
+                    style="@style/appTextStyle"
+                    android:textStyle="normal"
+                    android:textSize="25sp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center|top"
+                    android:layout_marginVertical="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/sunrise"
+                        android:layout_margin="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{weather.current_observation.astronomy.sunrise}"
+                        style="@style/appTextStyle"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/sunset"
+                        android:layout_margin="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{weather.current_observation.astronomy.sunset}"
+                        style="@style/appTextStyle"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
