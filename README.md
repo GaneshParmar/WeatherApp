@@ -15,7 +15,7 @@ The Weather App is an Android application that allows users to search for weathe
 
 To run the Weather App locally or make modifications to the codebase, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/weather-app.git`
+1. Clone the repository: `git clone https://github.com/GaneshParmar/WeatherApp.git`
 2. Open the project in Android Studio.
 3. Build and run the app on an emulator or a physical device.
 
