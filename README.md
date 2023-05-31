@@ -32,9 +32,9 @@ Please note that the app uses a free version of a weather API, which has a month
 
 ## Screenshots
 <div align="center">
-  <img src="https://github.com/GaneshParmar/WeatherApp/assets/80880253/1b3a5477-5bf4-4bfa-b1e5-50e8bc7e67bd" alt="Screenshot 1" width="250" />
-  <img src="https://github.com/GaneshParmar/WeatherApp/assets/80880253/7a7de623-270d-4596-912a-60a9cdb66266" alt="Screenshot 2" width="250" />
-  <img src="https://github.com/GaneshParmar/WeatherApp/assets/80880253/dcaa8747-1a57-479f-b39d-830995f0724a" alt="Screenshot 3" width="250" />
+  <img src="https://github.com/GaneshParmar/WeatherApp/assets/80880253/8844f9a4-98d6-4137-b570-1be9995bdff8" alt="Screenshot 1" width="250" />
+  <img src="https://github.com/GaneshParmar/WeatherApp/assets/80880253/f173fea7-2fe6-40bf-8a79-c758646b042e" alt="Screenshot 2" width="250" />
+  <img src="https://github.com/GaneshParmar/WeatherApp/assets/80880253/fddcac00-34f6-418c-b172-1ddd33fa37a8" alt="Screenshot 3" width="250" />
 </div>
 
 
